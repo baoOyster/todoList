@@ -1,0 +1,20 @@
+.todo-check{
+    border-bottom: 1px solid;
+}
+
+.missionDone{
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.selectBtn{
+    cursor: pointer;
+}
+
+.selectBtn:hover{
+    color: red;
+}
+
+.selected{
+    color: hsl(220, 98%, 61%)!important;
+}
