@@ -1,3 +1,8 @@
+.dark-mode{
+    background-color: hsl(235, 24%, 19%)!important;
+    color: #fff;
+}
+
 #todoDiv{
     width: 60%;
     position: absolute;
@@ -48,3 +53,4 @@
         width: 95%;
     }
 }
+

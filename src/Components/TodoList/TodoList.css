@@ -4,13 +4,13 @@
     background-color: #fff;
 }
 
-.todo-check{
+.fixBorder{
     border-bottom: 1px solid;
 }
 
 .missionDone{
     text-decoration: line-through;
-    color: rgba(0, 0, 0, 0.5);
+    color: hsl(234, 39%, 85%);
 }
 
 .taskList{
@@ -25,15 +25,6 @@
     padding: 2% 1rem;
 }
 
-.showTodo{
-    display: flex;
-}
-
-.showTodo p+p::before{
-    content: "";
-    margin-right: 1rem;
-}
-    
 .selectBtn{
     cursor: pointer;
 }
@@ -44,4 +35,34 @@
     
 .selected{
     color: hsl(220, 98%, 61%)!important;
+}
+/* Desktop version */
+.showTodoDesktop{
+    display: flex;
+}
+
+.showTodoDesktop p+p::before{
+    content: "";
+    margin-right: 1rem;
+}
+/* Mobile version */
+.showTodoMobile{
+    display: none;
+    justify-content: space-around;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 600px){
+    .showTodoDesktop{
+        display: none;
+    }
+
+    .showTodoMobile{
+        display: flex;
+        margin-top: 2.2rem;
+        margin-bottom: 3rem;
+        padding: 1rem 0;
+        border-radius: 5px;
+    }
 }

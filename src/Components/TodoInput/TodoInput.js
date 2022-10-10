@@ -10,16 +10,18 @@ export const TodoInput = () => {
     const todoInput = document.getElementById('todoInput');
     const backgroundState = useSelector(selectAppColorChange);
     const missionInput = document.getElementById('missionInput');
-    // if(backgroundState){
-    //     todoInput.style.backgroundColor = '#fff';
-    //     missionInput.style.backgroundColor = '#fff';
-    //     missionInput.style.color = "black";
-    //   }else{
-    //     todoInput.style.backgroundColor = 'hsl(235, 24%, 19%)';
-    //     missionInput.style.backgroundColor = 'hsl(235, 24%, 19%)';
-    //     missionInput.style.color = "#fff";
-    //   }
-
+    const changeBackgroundState = async () => {
+        if(backgroundState){
+        todoInput.style.backgroundColor = '#fff';
+        missionInput.style.backgroundColor = '#fff';
+        missionInput.style.color = "black";
+      }else{
+        todoInput.style.backgroundColor = 'hsl(235, 24%, 19%)';
+        missionInput.style.backgroundColor = 'hsl(235, 24%, 19%)';
+        missionInput.style.color = "#fff";
+      }
+    }
+    changeBackgroundState();
     const createTodo = (text) => { //sent todo to the store for rendering to mission later 
         dispatch(addTodo({
             text: text, 

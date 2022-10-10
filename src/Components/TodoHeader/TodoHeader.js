@@ -9,7 +9,6 @@ export function TodoHeader(){
     const buttonIconBool = useSelector(selectAppColorChange);
     function changeBackground () {
         dispatch(changeState());
-        console.log(buttonIconBool);
     }
     return (
         <div className='todoHeader'>
