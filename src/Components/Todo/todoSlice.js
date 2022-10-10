@@ -22,9 +22,9 @@ const todoCreatorSlice = createSlice({
                 }
             });
         },
-        deleteAll: state => state = [],
+        deleteCompleted: state => state.filter(todo => todo.done === false)
     }
 })
 
-export const { addTodo, stateChangeTodo } = todoCreatorSlice.actions;
+export const { addTodo, stateChangeTodo, deleteCompleted } = todoCreatorSlice.actions;
 export default todoCreatorSlice.reducer;

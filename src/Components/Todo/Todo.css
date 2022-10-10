@@ -1,8 +1,8 @@
 #todoDiv{
-    width: 40%;
+    width: 60%;
     position: absolute;
     left: 50%;
-    margin-top: -150px;
+    margin-top: -200px;
     transform: translateX(-50%);
 
 }
@@ -35,4 +35,16 @@
 .todo-check input{
     width: 100%;
     height: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+    #todoDiv{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #todoDiv{
+        width: 95%;
+    }
 }

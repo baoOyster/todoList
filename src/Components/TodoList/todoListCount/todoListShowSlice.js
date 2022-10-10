@@ -5,25 +5,17 @@ export const selectOnShowState = state => state.todoListShow;
 const todoListShowSlice = createSlice({
     name: "todoListShow",
     initialState: {
-        all: true,
-        active: false,
-        completed: false
+        mode: "all"
     },
     reducers: {
         onAll: state => {
-            state.all = true;
-            state.active = false;
-            state.completed = false;
+            state.mode = "all";
         },
         onActive: state => {
-            state.all = false;
-            state.active = true;
-            state.completed = false;
+            state.mode = "active";
         },
         onCompleted: state => {
-            state.all = false;
-            state.active = false;
-            state.completed = true;
+            state.mode = "completed";
         }
     }
 })

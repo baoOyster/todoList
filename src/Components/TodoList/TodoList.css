@@ -1,3 +1,9 @@
+.todoTask{
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    background-color: #fff;
+}
+
 .todo-check{
     border-bottom: 1px solid;
 }
@@ -7,14 +13,35 @@
     color: rgba(0, 0, 0, 0.5);
 }
 
+.taskList{
+    height: 400px;
+    overflow-y: scroll;
+    overflow-x: none;
+}
+/* Todo list count */
+.todoListCount{
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 1rem;
+}
+
+.showTodo{
+    display: flex;
+}
+
+.showTodo p+p::before{
+    content: "";
+    margin-right: 1rem;
+}
+    
 .selectBtn{
     cursor: pointer;
 }
-
+    
 .selectBtn:hover{
-    color: red;
+   color: red;
 }
-
+    
 .selected{
     color: hsl(220, 98%, 61%)!important;
 }
